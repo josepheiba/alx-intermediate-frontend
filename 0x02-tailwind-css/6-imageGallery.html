@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid and Flexbox Layout with Image Gallery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1rem;
+        }
+    </style>
+</head>
+<body class="p-4">
+    <header class="bg-blue-500 text-white p-4">
+        <h1 class="text-3xl">Grid and Flexbox Layout</h1>
+    </header>
+
+    <main class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-4 min-h-screen">
+        <section class="lg:col-span-2 flex">
+            <div class="bg-red-200 p-4 w-1/2">Flexbox Item 1</div>
+            <div class="bg-red-400 p-4 w-1/2">Flexbox Item 2</div>
+        </section>
+        <aside class="bg-green-200 p-4">Sidebar</aside>
+    </main>
+
+    <!-- Image Gallery Section -->
+    <section class="mt-8">
+        <h2 class="text-2xl font-bold mb-4">Responsive Image Gallery</h2>
+        <div class="gallery-grid">
+            <div class="bg-gray-200 h-48 flex items-center justify-center">
+                <span class="text-gray-500">Image 1</span>
+            </div>
+            <div class="bg-gray-200 h-48 flex items-center justify-center">
+                <span class="text-gray-500">Image 2</span>
+            </div>
+            <div class="bg-gray-200 h-48 flex items-center justify-center">
+                <span class="text-gray-500">Image 3</span>
+            </div>
+            <div class="bg-gray-200 h-48 flex items-center justify-center">
+                <span class="text-gray-500">Image 4</span>
+            </div>
+            <div class="bg-gray-200 h-48 flex items-center justify-center">
+                <span class="text-gray-500">Image 5</span>
+            </div>
+            <div class="bg-gray-200 h-48 flex items-center justify-center">
+                <span class="text-gray-500">Image 6</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white p-4 mt-4">
+        <p>&copy; 2024 John Doe's Blog</p>
+    </footer>
+</body>
+</html>
