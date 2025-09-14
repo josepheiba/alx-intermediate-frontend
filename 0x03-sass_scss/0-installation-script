@@ -1,0 +1,14 @@
+SASS Installation Steps:
+
+1. Created the project directory: 0x03-sass_scss
+2. Navigated to the project directory
+3. Installed SASS using npm:
+   npm install sass
+
+Note: The specified version 3.7.4 was not available, so the latest stable version was installed instead.
+
+To compile SASS files, use:
+npx sass input.scss output.css
+
+To check SASS version:
+npx sass --version
